@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Ajax - Layer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src='http://yandex.st/jquery/1.7.2/jquery.min.js'></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&mode=debug&ns=ymaps">
+    </script>
+    <script src='quadLoader.js'></script>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    ymaps.ready(function () {
+        var map = new ymaps.Map('map', {
+            center: [55.78641288270882, 37.51383301425924],
+            zoom: 10
+        });
+
+        (new QuadLoader()).addToMap(map);
+
+    });
+</script>
+
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+</body>
+</html>
+
